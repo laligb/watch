@@ -1,0 +1,8 @@
+<p>My List</p>
+<ul>
+<% @lists.each do |list| %>
+  <li><%= link_to label_tag(list.name, list.name), list_path(list) %></li>
+<% end %>
+</ul>
+
+<%= link_to "create new", new_list_path %>

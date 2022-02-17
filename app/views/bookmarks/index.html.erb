@@ -1,0 +1,8 @@
+<p>My Bookmarks</p>
+<ul>
+<% @Bookmarks.each do |bookmark| %>
+  <li><%= link_to label_tag(bookmark.name, bookmark.name), bookmark_path(bookmark) %></li>
+<% end %>
+</ul>
+
+<%= link_to "create new", new_list_bookmark_path %>
