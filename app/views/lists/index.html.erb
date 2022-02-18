@@ -1,8 +1,14 @@
 <p>My List</p>
-<ul>
-<% @lists.each do |list| %>
-  <li><%= link_to label_tag(list.name, list.name), list_path(list) %></li>
-<% end %>
-</ul>
 
-<%= link_to "create new", new_list_path %>
+<img src="app/assets/images/banner.png" class="img-fluid" alt="Responsive image">
+
+<div class ='card' style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+  <% @lists.each do |list| %>
+    <li class = "list-group-item" style="margin: 10px"><%= link_to label_tag(list.name, list.name), list_path(list) %></li>
+  <% end %>
+  </ul>
+</div>
+
+<br>
+<button type="button" class="btn btn-outline-primary"><%= link_to "create new", new_list_path %></button>
